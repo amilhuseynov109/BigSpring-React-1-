@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef ,} from 'react';
-import logo from './assets/logo.png'; 
-
-
+import { Link } from 'react-router'
+import logo from '../../assets/logo.png'; 
 
 export default function Navbar() {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +11,7 @@ export default function Navbar() {
       lastFocusedElementRef.current = document.activeElement;
       setIsMenuOpen(true);
 
-      // Move focus into menu after state update
+      
       setTimeout(() => {
          menuRef.current?.focus();
       }, 0);
@@ -21,7 +20,7 @@ export default function Navbar() {
    const closeMenu = () => {
       setIsMenuOpen(false);
 
-      // Restore focus after state update
+    
       setTimeout(() => {
          lastFocusedElementRef.current?.focus();
       }, 0);
@@ -41,25 +40,23 @@ export default function Navbar() {
       };
    }, [isMenuOpen]);
 
-
    return (
       <nav
          className="flex py-2 px-4 md:px-8 bg-white border-b border-slate-300 min-h-[68px] relative z-20"
          aria-label="Main navigation "
       >
          <div className="md:max-w-[1100px] w-full md:mx-auto flex flex-wrap items-center justify-between md:gap-4 ">
-            <a
-               href="#"
+            <Link
+               to="/"
                className="min-w-9 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
             >
                <span className="sr-only">Your Company</span>
                <img
-              //  Logo img
                   src={logo}
                   alt="readymadeui logo"
                   className="h-9 w-auto"
                />
-            </a>
+            </Link>
 
             <div
                id="collapseMenu"
@@ -68,8 +65,9 @@ export default function Navbar() {
                className={`${isMenuOpen ? "block" : "hidden"} lg:block max-lg:bg-white max-lg:border-l max-lg:border-slate-300 max-lg:w-1/2 max-lg:fixed max-lg:top-0 max-lg:right-0 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto max-sm:w-full z-50 outline-none`}
             >
                <div className="py-2 px-4 flex justify-between items-center border-b border-slate-300 sticky top-0 bg-white lg:hidden max-lg:min-h-[68px]">
-                  <a
-                     href="#"
+                  <Link
+                     to="/"
+                     onClick={closeMenu}
                      className="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
                   >
                      <span className="sr-only">Your Company</span>
@@ -78,7 +76,7 @@ export default function Navbar() {
                         alt="readymadeui logo dialog"
                         className="h-7 w-auto"
                      />
-                  </a>
+                  </Link>
                   <button type="button" aria-controls="collapseMenu"
                      onClick={closeMenu}
                      id="toggleClose"
@@ -101,54 +99,47 @@ export default function Navbar() {
 
                <ul className="flex flex-col gap-8 font-semibold text-md text-slate-900 lg:flex-row max-lg:p-6">
                   <li>
-                     <a
-                        href="#"
-                        className="hover:text-[#0aa8a7]  text-[#0aa8a7] focus:outline-none focus-visible:ring-2  rounded"
-                        aria-current="page"
-                     >
-                        Home
-                     </a>
+                     <Link to={'/'} onClick={closeMenu}>
+                        <span className="hover:text-[#0aa8a7] text-[#0aa8a7] focus:outline-none focus-visible:ring-2 rounded" aria-current="page">
+                           Home
+                        </span>
+                     </Link>
                   </li>
                   <li>
-                     <a
-                        href="#"
-                        className="hover:text-[#0aa8a7]  focus:outline-none focus-visible:ring-2  rounded"
-                     >
-                        Blog
-                     </a>
+                     <Link to={'/Blog'} onClick={closeMenu}>
+                        <span className="hover:text-[#0aa8a7] focus:outline-none focus-visible:ring-2 rounded">
+                           Blog
+                        </span>
+                     </Link>
                   </li>
                   <li>
-                     <a
-                        href="#"
-                        className="hover:text-[#0aa8a7]  focus:outline-none focus-visible:ring-2  rounded"
-                     >
-                        Princing
-                     </a>
+                     <Link to={'/Pricing'} onClick={closeMenu}>
+                        <span className="hover:text-[#0aa8a7] focus:outline-none focus-visible:ring-2 rounded">
+                           Pricing
+                        </span>
+                     </Link>
                   </li>
                   <li>
-                     <a
-                        href="#"
-                        className="hover:text-[#0aa8a7]  focus:outline-none focus-visible:ring-2 rounded"
-                     >
-                        Contact
-                     </a>
+                     <Link to={'/Contact'} onClick={closeMenu}>
+                        <span className="hover:text-[#0aa8a7] focus:outline-none focus-visible:ring-2 rounded">
+                           Contact
+                        </span>
+                     </Link>
                   </li>
                   <li>
-                     <a
-                        href="#"
-                        className="hover:text-[#0aa8a7]  focus:outline-none focus-visible:ring-2  rounded"
-                     >
-                        FAQ
-                     </a>
+                     <Link to={'/FAQ'} onClick={closeMenu}>
+                        <span className="hover:text-[#0aa8a7] focus:outline-none focus-visible:ring-2 rounded">
+                           FAQ
+                        </span>
+                     </Link>
                   </li>
                </ul>
             </div>
 
             <div className="flex items-center gap-4">
-               
                <a
                   href="#"
-                  className="hidden md:flex py-3 px-5 text-md rounded-3xl font-semibold cursor-pointer text-white border  bg-[#0aa8a7] hover:scale-115 duration-300 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                  className="hidden md:flex py-3 px-5 text-md rounded-3xl font-semibold cursor-pointer text-white border bg-[#0aa8a7] hover:scale-115 duration-300 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                >
                   Get Started
                </a>
@@ -160,7 +151,8 @@ export default function Navbar() {
                   aria-haspopup="true"
                   id="toggleOpen"
                   onClick={openMenu}
-                  className="cursor-pointer lg:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
+                  className="cursor-pointer lg:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+               >
                   <span className="sr-only">Open main menu</span>
                   <svg
                      className="size-7 fill-slate-900"
@@ -179,4 +171,4 @@ export default function Navbar() {
          </div>
       </nav>
    );
-};
+}
