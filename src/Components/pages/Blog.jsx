@@ -13,10 +13,10 @@ function Blog() {
                 <div className=''>
                     <img src={blog4} alt="" className='rounded-xl  ' />
                 </div>
-                <div className='md:flex md:flex-col md:gap-4 mt-4'>
+                <div className='flex flex-col gap-4 mt-4'>
                     <h1 className='text-2xl md:text-3xl font-bold'>Adversus is a web-based dialer and practical CRM solution</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita enim quas incidunt deserunt, inventore amet. Non accusamus in cumque placeat quo ab aliquid? Ducimus, saepe?</p>
-                    <a href="#" className='p-3 md:mt-2 text-lg text-white font-bold bg-[#0aa8a7] w-[40%] md:w-[30%] text-center md:justify-center md:items-center  md:mx-0 rounded-3xl'>Read More</a>
+                    <a href="#" className=' p-3 md:mt-2 text-lg text-white font-bold bg-[#0aa8a7] w-[40%] md:w-[30%] text-center md:justify-center md:items-center  md:mx-0 rounded-3xl'>Read More</a>
                 </div>
             </div>
             <div className='md:flex md:flex-row'>
