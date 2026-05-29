@@ -74,7 +74,7 @@ export default function Navbar() {
                      <img
                         src={logo}
                         alt="readymadeui logo dialog"
-                        className="h-7 w-auto"
+                        className="h-9 w-auto"
                      />
                   </Link>
                   <button type="button" aria-controls="collapseMenu"
@@ -96,44 +96,44 @@ export default function Navbar() {
                      </svg>
                   </button>
                </div>
-
-               <ul className="flex flex-col gap-8 font-semibold text-md text-slate-900 lg:flex-row max-lg:p-6">
+ <ul className="flex flex-col gap-8 font-semibold text-md text-slate-900 lg:flex-row max-lg:p-6">
                   <li>
                      <Link to={'/'} onClick={closeMenu}>
-                        <span className="hover:text-[#0aa8a7] text-[#0aa8a7] focus:outline-none focus-visible:ring-2 rounded" aria-current="page">
+                        <span className="hover:text-[#0aa8a7] text-2xl md:text-xl text-[#0aa8a7] focus:outline-none focus-visible:ring-2 rounded" aria-current="page">
                            Home
                         </span>
                      </Link>
                   </li>
                   <li>
                      <Link to={'/Blog'} onClick={closeMenu}>
-                        <span className="hover:text-[#0aa8a7] focus:outline-none focus-visible:ring-2 rounded">
+                        <span className="hover:text-[#0aa8a7] text-2xl md:text-xl focus:outline-none focus-visible:ring-2 rounded">
                            Blog
                         </span>
                      </Link>
                   </li>
                   <li>
                      <Link to={'/Pricing'} onClick={closeMenu}>
-                        <span className="hover:text-[#0aa8a7] focus:outline-none focus-visible:ring-2 rounded">
+                        <span className="hover:text-[#0aa8a7] text-2xl md:text-xl focus:outline-none focus-visible:ring-2 rounded">
                            Pricing
                         </span>
                      </Link>
                   </li>
                   <li>
                      <Link to={'/Contact'} onClick={closeMenu}>
-                        <span className="hover:text-[#0aa8a7] focus:outline-none focus-visible:ring-2 rounded">
+                        <span className="hover:text-[#0aa8a7] text-2xl md:text-xl focus:outline-none focus-visible:ring-2 rounded">
                            Contact
                         </span>
                      </Link>
                   </li>
                   <li>
                      <Link to={'/FAQ'} onClick={closeMenu}>
-                        <span className="hover:text-[#0aa8a7] focus:outline-none focus-visible:ring-2 rounded">
+                        <span className="hover:text-[#0aa8a7] text-2xl md:text-xl focus:outline-none focus-visible:ring-2 rounded">
                            FAQ
                         </span>
                      </Link>
                   </li>
                </ul>
+              
             </div>
 
             <div className="flex items-center gap-4">

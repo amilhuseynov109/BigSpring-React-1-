@@ -5,7 +5,7 @@ function Pricing() {
   return (
     <>
         <section>
-            <div className='md:max-w-[1100px] md:mx-auto'>
+            <div className='md:max-w-[1100px] md:mx-auto '>
                 <div className='my-14'>
                     <h1 className='text-5xl text-center'>Pricing</h1>
                 </div>
@@ -43,7 +43,7 @@ function Pricing() {
             </div>
         </section>
         <section>
-            <div className='p-6 mt-10 md:flex md:flex-row md:items-center md:justify-center md:gap-4 md:mb-20j' >
+            <div className='p-6 mt-10 md:flex md:flex-row md:items-center md:justify-center md:gap-4 mb-20' >
                         <div>
                             <img src={cta} alt="" className='w-[300px] mx-auto'/>
                         </div>

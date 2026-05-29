@@ -7,7 +7,7 @@ function Blog() {
   return (
     <>
       <section>
-        <div className='mt-10 md:max-w-[1100px] md:mx-auto'>
+        <div className='mt-10 md:max-w-[1100px] md:mx-auto mb-15'>
             <h1 class="h1 text-center font-normal text-[56px]">Latest news</h1>
             <div className='p-4 mt-8 md:grid md:grid-cols-2 md:gap-5 md:mx-auto '>
                 <div className=''>
@@ -55,6 +55,52 @@ function Blog() {
 }
 
 export default Blog
+
+
+//  <ul className="flex flex-col gap-8 font-semibold text-md text-slate-900 lg:flex-row max-lg:p-6">
+//                   <li>
+//                      <Link to={'/'} onClick={closeMenu}>
+//                         <span className="hover:text-[#0aa8a7] text-2xl md:text-xl text-[#0aa8a7] focus:outline-none focus-visible:ring-2 rounded" aria-current="page">
+//                            Home
+//                         </span>
+//                      </Link>
+//                   </li>
+//                   <li>
+//                      <Link to={'/Blog'} onClick={closeMenu}>
+//                         <span className="hover:text-[#0aa8a7] text-2xl md:text-xl focus:outline-none focus-visible:ring-2 rounded">
+//                            Blog
+//                         </span>
+//                      </Link>
+//                   </li>
+//                   <li>
+//                      <Link to={'/Pricing'} onClick={closeMenu}>
+//                         <span className="hover:text-[#0aa8a7] text-2xl md:text-xl focus:outline-none focus-visible:ring-2 rounded">
+//                            Pricing
+//                         </span>
+//                      </Link>
+//                   </li>
+//                   <li>
+//                      <Link to={'/Contact'} onClick={closeMenu}>
+//                         <span className="hover:text-[#0aa8a7] text-2xl md:text-xl focus:outline-none focus-visible:ring-2 rounded">
+//                            Contact
+//                         </span>
+//                      </Link>
+//                   </li>
+//                   <li>
+//                      <Link to={'/FAQ'} onClick={closeMenu}>
+//                         <span className="hover:text-[#0aa8a7] text-2xl md:text-xl focus:outline-none focus-visible:ring-2 rounded">
+//                            FAQ
+//                         </span>
+//                      </Link>
+//                   </li>
+//                </ul>
+
+
+
+
+
+
+
 
 
 
